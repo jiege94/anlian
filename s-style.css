@@ -1,0 +1,178 @@
+.s-outer{
+	width: 640px;
+	min-height: 1099px;
+	margin: 0 auto;
+	background: #fdefe7;
+}
+/*============= 发送 ===========*/
+.s-f-head{
+	background: #ff8288;
+	height: 88px;
+	position: relative;
+}
+.s-return{
+	position: absolute;
+	top: 30px;
+	left: 24px;
+}
+.s-return i{
+	width: 17px;
+	height: 31px;
+	display: block;
+	background: url(image/s1.png) no-repeat;
+}
+.s-send{
+	position: absolute;
+	font-size: 30px;
+	color: #fff;
+	right: 30px;
+	top: 26px;
+}
+.s-f-con{
+	width: 606px;
+	margin: 18px auto 0;
+}
+.s-f-think{
+	position: relative;	
+}
+.s-f-think textarea{
+	width: 586px;
+	height: 160px;
+	border: none;
+	border-radius: 10px;
+	font-size: 20px;
+	padding: 10px;	
+	color: #666;
+}
+.s-f-think p{
+	font-size: 20px;
+	color: #666666;
+	position: absolute;
+	top: 38px;
+	left: 29px;
+}
+.s-f-plus{
+	overflow: hidden;
+}
+.s-plus1,.s-plus{
+	float: left;
+	width: 106px;
+	height: 104px;
+	background: #fff;
+	border: 1px solid #dedede;
+	text-align: center;
+	margin: 25px 15px 0;
+	overflow: hidden;
+}
+.s-plus img{
+	width: 106px;
+	height: 104px;
+	float: left;
+}
+.s-plus1 img{
+	margin-top: 26px;
+}
+/*=========== 选择照片 =======*/
+.s-f-head p{
+	text-align: center;
+	color: #fff;
+	font-size: 34px;
+	line-height: 88px;
+}
+.s-x-con{
+	margin-top: 23px;
+}
+.s-x-img{
+	overflow: hidden;
+	margin-left: 13px;
+}
+.s-x-img li{
+	float: left;
+	width: 146px;
+	height: 143px;
+	border: 1px solid #dedede;
+	overflow: hidden;
+	margin: 6px 0 0 5px;
+	cursor: pointer;
+	position: relative;
+}
+.s-x-img li .s-img1{
+	float: left;
+	width: 146px;
+	height: 143px;
+}
+.s-x-dui{
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #11cf08;
+	color: #fff;
+	font-size: 22px;
+	right: 5px;
+	top: 5px;	
+	display: none;
+}
+.s-x-dui img{
+	position: absolute;
+	top: 5px;
+	left: 3px;
+}
+/*=========== 日记墙 =====*/
+.s-riji{
+	position: 
+}
+.s-r-send,.r-i{
+	top:32px;
+}
+.r-i i{
+	background: url(image/s9.png) no-repeat;
+	width: 42px;
+	height: 26px;
+}
+.s-r-riji li{
+	overflow: hidden;
+	border-radius: 10px;
+	background: #fff;
+	padding: 27px 0 35px 18px;
+}
+.s-r-riji li img{
+	float: left;
+}
+.s-r-tit{
+	overflow: hidden;
+	float: left;
+	margin-left: 30px;
+	width: 454px;
+}
+.s-r-tit p{
+	font-size: 30px;
+	color: #fe8c8c;
+	overflow:hidden;
+}
+.s-r-tit p span{
+	float: right;
+	font-size: 24px;
+	color: #cccccc;
+	margin-right: 30px;
+}
+.s-r-tit .s-r-zi{
+	font-size: 22px;
+	line-height: 36px;
+	color: #666666;
+}
+.s-r-img{
+	overflow: hidden;
+}
+.s-r-img li{
+	border-radius: 0;
+	float: left;
+	padding: 5px;
+	overflow: hidden;
+}
+.s-r-img li img{
+	width: 140px;
+	height: 140px;
+	float: left;
+}
+

@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="s-anlian.css">
+	<script type="text/javascript"src="jquery-1.8.3.min.js"></script>
+	<script src="ort.js"></script>
+</head>
+<body>
+	<div class="xzy-zhengti">
+		<div class="xzy-head">
+			<span class="zbd">绑定手机号</span>
+		</div>
+		<div class="xzy-con2">
+			<p class="zbd-mf">免费绑定手机，看看谁暗恋了自己</p>
+			<input type="text" name="" value="填写11位手机号码" class="zbd-tx">
+			<div class="zbd-hq">获取验证码</div>
+			<p class="zbd-yzm">请输入验证码</p>
+			<input type="text" name="" value="请填写手机验证码"class="zbd-sjyz">
+			<div class="zbd-dl">登录</div>
+			<p class="zbd-jkdl">输入手机号填写收到的验证码即可登录</p>
+		</div>
+	</div>
+	<script>
+		$(function(){
+			$(".zbd-tx").focus(function(){
+				$(".zbd-tx").val("");
+			})
+			$(".zbd-hq").click(function(){
+				var reg=/^[0-9]{11}$/g;
+				if ($(".zbd-tx").val().search(reg)==-1) {
+					alert("请输入正确的手机号")
+				}else{
+					var str="";
+					for (var i = 0; i < 4; i++) {
+						var a=Math.floor(Math.random()*10);
+						str+=a;
+					}
+					$(".zbd-sjyz").val(str);
+				}			
+			})
+			$('.zbd-dl').click(function(){
+				if ($(".zbd-tx").val()==""||$(".zbd-sjyz").val()=="") {
+					alert('请输入完整');
+				}else{
+					window.location.href='al-xzy.html';
+				}
+			})
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>选择照片</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="s-style.css">
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="ort.js"></script>
+</head>
+<body>
+	<div class="s-outer">
+		<div class="s-f-head">
+			<a class="s-return" href="s-f.html">
+				<i></i>
+			</a>
+			<p>选择照片</p>
+			<a class="s-send" href="javascript:;">完成</a>
+		</div>
+		<div class="s-x-con">
+			<ul class="s-x-img" id="s-img">
+				<li>
+					<img class="s-img1" src="image/s2.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s3.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s5.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s6.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s2.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s3.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s5.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+				<li>
+					<img class="s-img1" src="image/s6.png" alt="">
+					<p class="s-x-dui">
+						<img src="image/s7.png" alt="">
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+		function getcookie(key){
+			var cookies=unescape(document.cookie);
+			var arr1=cookies.split("; ");
+			for (var i = 0; i < arr1.length; i++) {
+				var arr2=arr1[i].split("=");
+				if(arr2[0]==key){
+					return arr2[1];
+				}
+			}
+		}
+		if(getcookie("index")!=null){
+			var num2=getcookie("index").split(",");
+			for (var x = 0; x < num2.length; x++) {
+				$(".s-x-dui").eq(x).css("display","block");
+			};
+		}
+		$(".s-img1").each(function(x){
+			$(".s-img1").eq(x).click(function(){
+				$(".s-x-dui").eq(x).toggle();
+			})
+		})
+		$(".s-send").click(function(){
+			var arr=[];
+			var num=[];
+			for (var i = 0; i < $(".s-x-dui").length; i++) {
+				if($(".s-x-dui").eq(i).css("display")=="block"){
+						arr.push($(".s-img1").eq(i).attr("src"));
+						num.push(i);
+					}
+				}
+			var str=arr.join();
+			var str2=num.join();
+			document.cookie="num="+str;
+			document.cookie="index="+str2;
+			window.location.href="s-f.html";
+		})
+	</script>
+</body>
+</html>

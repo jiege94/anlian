@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>标题</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="s-anlian.css">
+	<link rel="stylesheet" href="reset.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
+</head>
+<body>
+	<div class="w-a1">
+		<p class="w-ap">
+			暗恋他她，从暗恋开始
+		</p>
+		<img src="image/6_03.png" alt="" class="w-am">
+		<p class="w-app">
+			缘是美丽的<span class="w-as">邂逅</span>,爱是心跳的感觉,情是心灵的交会,恋是甜蜜的思念,走在爱与被爱的边缘
+			,你见或者不见
+			爱你的心始终不改变！
+		</p>
+		<ul class="w-alist2">
+			<li class="w-ared2"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="ort.js"></script>
+	<script>
+		document.addEventListener('touchstart',function(ev){
+			 var ev=ev||event;
+			 var startx= ev.targetTouches[0].pageX;
+			document.addEventListener('touchend',function(ev){
+				var ev=ev||event;
+			 	var endx=ev.changedTouches[0].pageX;
+			 	if (startx-endx>=200) {
+			 		window.open('w-a2.html','_self');
+			 	}
+			},false) 			
+		},false)
+	</script>
+</body>
+</html>

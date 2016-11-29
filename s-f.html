@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>发消息</title>
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="s-style.css">
+	<script src="jquery-1.8.3.min.js"></script>
+	<script src="ort.js"></script>
+</head>
+<body>
+	<div class="s-outer s-f-outer">
+		<div class="s-f-head">
+			<a class="s-return" href="s-r.html">
+				<i></i>
+			</a>
+			<a class="s-send" href="javascript:;">发送</a>
+		</div>
+		<div class="s-f-con">
+			<div class="s-f-think">
+				<textarea name="" id="text"></textarea>
+				<p>写下你此刻的想法......</p>
+			</div>
+			<div class="s-f-plus">
+				<a class="s-plus1" href="javascript:;">
+					<img src="image/s4.png" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		function getcookie(key){
+			var cookies=unescape(document.cookie);
+			var arr1=cookies.split("; ");
+			for (var i = 0; i < arr1.length; i++) {
+				var arr2=arr1[i].split("=");
+				if(arr2[0]==key){
+					return arr2[1];
+				}
+			}
+		}
+		if(getcookie("text")){
+			$("#text").val(getcookie("text"));
+			$(".s-f-think p").css("display","none");
+		}
+		if(getcookie("num")!=null){
+			var str=getcookie("num");
+			console.log(str);
+			var arr=str.split(",");
+			for (var i = 0; i < arr.length; i++) {
+				$(".s-f-plus").prepend("<a class=s-plus href=javascript:;><img src="+arr[i]+"><a>")
+			}
+		}
+		$("#text").focus(function(){
+			if($("#text").val()==""){
+				$(".s-f-think p").css("display","none");
+			}
+		})
+		$("#text").blur(function(){
+			if($("#text").val()==""){
+				$(".s-f-think p").css("display","block");
+			}
+		})
+		$(".s-plus1").click(function(){
+			document.cookie="text="+$("#text").val();
+			window.location.href="s-x.html";
+		})
+		$(".s-send").click(function(){
+			document.cookie="text="+$("#text").val();
+			window.location.href="s-r.html";
+		})
+	</script>
+</body>
+</html>
